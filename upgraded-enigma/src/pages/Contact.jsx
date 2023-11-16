@@ -5,7 +5,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      const response = await fetch('process_form.php', {
+      const response = await fetch('/process_form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,7 +26,6 @@ export default function Contact() {
       console.error('Error submitting form:', error);
     }
   };
-
   return (
     <>
       <h1>Contact Me</h1>

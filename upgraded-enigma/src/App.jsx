@@ -1,6 +1,7 @@
 import './App.css'
 import { Outlet } from 'react-router-dom';
 import Nav from './components/NavTabs';
+import LinkTabs from './components/LinkTabs';
 
 function App() {
 
@@ -13,6 +14,9 @@ function App() {
       <div>
         <Outlet />
       </div>
+    <footer>
+      <LinkTabs />
+    </footer>
     </>
   )
 }

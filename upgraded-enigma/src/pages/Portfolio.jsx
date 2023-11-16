@@ -1,22 +1,75 @@
-export default function Blog() {
-  return (
-    <div>
-      <h1>Blog Page</h1>
-      <p>
-        Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
-        Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu
-        dictum. Ut vel ante eget massa ornare placerat. Etiam nisl orci, finibus
-        sodales volutpat et, hendrerit ut dolor. Suspendisse porta dictum nunc,
-        sed pretium risus rutrum eget. Nam consequat, ligula in faucibus
-        vestibulum, nisi justo laoreet risus, luctus luctus mi lacus sit amet
-        libero. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos. Mauris pretium condimentum tellus eget
-        lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Donec placerat accumsan mi, ut congue neque placerat eu. Donec nec ipsum
-        in velit pellentesque vehicula sit amet at augue. Maecenas aliquam
-        bibendum congue. Pellentesque semper, lectus non ullamcorper iaculis,
-        est ligula suscipit velit, sed bibendum turpis dui in sapien.
-      </p>
-    </div>
-  );
+import React from "react";
+import passwordGeneratorImage from "src/assets/images/password generator-logos.jpeg";
+import weatherDashboardImage from "src/assets/images/weather dashboard-logos.jpeg";
+import dirtyShoesImage from "src/assets/images/dirty shoes-logos.jpeg";
+import noteTakerImage from "src/assets/images/note taker-logos.jpeg";
+import theTechBlogImage from "src/assets/images/the tech blog-logos.jpeg";
+import myFirstPortfolioImage from "src/assets/images/my first portfolio-logos.jpeg";
+
+function Portfolio() {
+  const projects = [
+    {
+      link: "https://zlyda1993.github.io/studious-octo-parakeet/",
+      id: 1,
+      title: "Password Generator",
+      image: passwordGeneratorImage,
+      description: "Finish writing an application to generate a new password using prompts.",
+    },
+    {
+      link: "https://zlyda1993.github.io/jubilant-octo-tribble/",
+      id: 2,
+      title: "Weather Dashboard",
+      image: weatherDashboardImage,
+      description: "Set up a dashboard that uses a third party API to bring in the weather for the current day and five days in the future."
+    },
+    {
+      link: "https://philipthomas05.github.io/UNCC-Bootcamp-Project-1/",
+      id: 3,
+      title: "Dirty Shoes",
+      image: dirtyShoesImage,
+      description: "An application that helps you find trails based on your region within North Carolina.",
+    },
+    {
+      link: "https://agile-stream-34363-76875d60fa6c.herokuapp.com/",
+      id: 4,
+      title: "Note Taker",
+      image: noteTakerImage,
+      description: "An app to take notes and also delete them.",
+    },
+    {
+      link: "https://cryptic-retreat-19540-00658701978c.herokuapp.com/",
+      id: 5,
+      title: "The Tech Blog",
+      image: theTechBlogImage,
+      description: "A blog page that allows you to create an account, make posts and leave comments on each post.",
+    },
+    {
+      link: "https://zlyda1993.github.io/refactored-tribble/",
+      id: 6,
+      title: "My first Portfolio",
+      image: myFirstPortfolioImage,
+      description: "First attempt at making a portfolio, but it still show cases some of my earlier work with coding."
+    }
+  ];
+    return (
+      <div>
+        <h1>Recent Projects</h1>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+          {projects.map((project) => (
+            <div key={project.id} style={{ margin: '10px', width: '300px' }}>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px' }}
+                />
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
 }
+export default Portfolio;

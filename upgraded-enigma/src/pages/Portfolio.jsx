@@ -1,10 +1,10 @@
 import React from "react";
-import passwordGeneratorImage from "src/assets/images/password generator-logos.jpeg";
-import weatherDashboardImage from "src/assets/images/weather dashboard-logos.jpeg";
-import dirtyShoesImage from "src/assets/images/dirty shoes-logos.jpeg";
-import noteTakerImage from "src/assets/images/note taker-logos.jpeg";
-import theTechBlogImage from "src/assets/images/the tech blog-logos.jpeg";
-import myFirstPortfolioImage from "src/assets/images/my first portfolio-logos.jpeg";
+import passwordGeneratorImage from "../assets/images/password generator-logos.jpeg";
+import weatherDashboardImage from "../assets/images/weather dashboard-logos.jpeg";
+import dirtyShoesImage from "../assets/images/dirty shoes-logos.jpeg";
+import noteTakerImage from "../assets/images/note taker-logos.jpeg";
+import theTechBlogImage from "../assets/images/the tech blog-logos.jpeg";
+import myFirstPortfolioImage from "../assets/images/my first portfolio-logos.jpeg";
 
 function Portfolio() {
   const projects = [

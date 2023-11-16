@@ -2,8 +2,8 @@ export default function Resume() {
   return (
     <div>
       <h1>Software Developer</h1>
+      
       <h3>Front-End</h3>
-
         <p>HTML</p>
         <p>CSS</p>
         <p>JavaScript</p>
